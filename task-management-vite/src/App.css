@@ -1,0 +1,18 @@
+div {
+  text-align: center;
+  margin: 0 auto;
+  border: 1px dotted rgb(217, 58, 18);
+}
+
+body {
+  font-size: xx-large;
+  background-color: blanchedalmond;
+}
+
+li {
+  padding-top: 2%;
+}
+
+button {
+  font-size: xx-large;
+}

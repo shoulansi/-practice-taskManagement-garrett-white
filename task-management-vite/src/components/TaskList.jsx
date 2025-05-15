@@ -1,11 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
 export default function TaskList() { 
-    
-    const {postId} = useParams();
-    
 
 const dataSet = [
     {
@@ -25,15 +22,11 @@ const dataSet = [
     }
 ];
 
-const postContent = dataSet.map(task => <li><a href="/post/">{task.title}</a></li>);
     
     return (
         <div>
             <h3>Task List!</h3>
-            <ul>{postContent}</ul>
+            <ul>{dataSet.map(task => <li><Link to={`/post/${task.postId}`}>{task.title}</Link></li>)}</ul>
         </div>
     );
 }
-
-// <header><h1>Tasks To Do</h1></header>
-  //  <ul><li><a href="/post/1">adsasdasd</a></li></ul>
